@@ -7,6 +7,7 @@ public class AI_Engine : MonoBehaviour {
     private List<Transform> nodes;
     private int currNode = 0;
 
+    public float speed = 50f;
     public float steerAngle = 40f;
     public WheelCollider wheelFL;
     public WheelCollider wheelFR;
@@ -42,8 +43,8 @@ public class AI_Engine : MonoBehaviour {
     }
 
     private void Drive(){
-        wheelFL.motorTorque = 50;
-        wheelFR.motorTorque = 50;
+        wheelFL.motorTorque = speed;
+        wheelFR.motorTorque = speed;
     }
 
     private void CheckNodeDistance()
